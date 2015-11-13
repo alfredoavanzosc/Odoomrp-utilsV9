@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="mrp_bom_component_tree_view_inh_searchview" model="ir.ui.view">
+            <field name="name">"mrp.bom.component.tree.view.inh.searchview</field>
+            <field name="model">mrp.bom.line</field>
+            <field name="inherit_id" ref="mrp.mrp_bom_component_tree_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="/tree[1]" position="attributes">
+                    <attribute name="editable"></attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="mrp.mrp_bom_form_action2" model="ir.actions.act_window">
+            <field name="name">MRP BoM 2</field>
+            <field name="res_model">mrp.bom</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+    </data>
+</openerp>
